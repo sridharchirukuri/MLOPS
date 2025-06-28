@@ -38,11 +38,11 @@ def preprocess(df: pd.DataFrame, dv: DictVectorizer, fit_dv: bool = False):
 
 @click.command()
 @click.option(
-    "C:\Users\sridh\Downloads\sampledata",
+    "--raw_data_path",
     help="Location where the raw NYC taxi trip data was saved"
 )
 @click.option(
-    "/workspaces/MLOPS/03-training/data",
+    "--dest_path",
     help="Location where the resulting files will be saved"
 )
 def run_data_prep(raw_data_path: str, dest_path: str, dataset: str = "green"):
